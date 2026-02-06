@@ -14,6 +14,12 @@ config/name="fps"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GlobalPlayerStats="*uid://cw6ui6ca4g0ue"
+P1="*uid://bph4tco0pcyvv"
+P2="*uid://cq7avcg8ln4qu"
+
 [input]
 
 forward_p1={
