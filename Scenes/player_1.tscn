@@ -11,6 +11,15 @@ material = SubResource("StandardMaterial3D_r7fgb")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2mvbs"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tmdyv"]
+albedo_color = Color(0, 0.85622066, 0.85628027, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xg3ne"]
+albedo_color = Color(0.39607844, 1, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tyugg"]
+albedo_color = Color(0.6509804, 0, 0.043137256, 1)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p0e4v"]
 albedo_color = Color(0.3854925, 0.38549247, 0.38549247, 1)
 
@@ -64,8 +73,11 @@ mesh = SubResource("CapsuleMesh_r7fgb")
 shape = SubResource("CapsuleShape3D_2mvbs")
 
 [node name="sapka" type="MeshInstance3D" parent="CharacterBody3D" unique_id=499498672]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.90549153, 0)
+transform = Transform3D(0.39987713, 0.0029550432, 0.009464998, -0.0028147413, 0.39994586, -0.00594906, -0.009507666, 0.005880629, 0.39984375, 0, 0.90549153, 0)
 mesh = ExtResource("1_2mvbs")
+surface_material_override/0 = SubResource("StandardMaterial3D_tmdyv")
+surface_material_override/1 = SubResource("StandardMaterial3D_xg3ne")
+surface_material_override/2 = SubResource("StandardMaterial3D_tyugg")
 
 [node name="ump" type="MeshInstance3D" parent="CharacterBody3D" unique_id=1368343015]
 transform = Transform3D(0.061048508, 0, 0.9981348, 0, 1, 0, -0.9981348, 0, 0.061048508, 2.6555367, -0.16616762, -0.93594956)
