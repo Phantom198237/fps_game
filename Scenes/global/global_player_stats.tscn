@@ -1,7 +1,9 @@
-[gd_scene format=3 uid="uid://clouisxcogpcd"]
+[gd_scene format=3 uid="uid://cm252yyks1k6t"]
 
-[ext_resource type="Script" uid="uid://cw6ui6ca4g0ue" path="res://Scripts/global_player_stats.gd" id="1_qsnd4"]
-[ext_resource type="Script" uid="uid://bph4tco0pcyvv" path="res://Scripts/p_1.gd" id="2_iiv82"]
+[ext_resource type="Script" uid="uid://cw6ui6ca4g0ue" path="res://Scripts/Global/global_player_stats.gd" id="1_qsnd4"]
+[ext_resource type="Script" uid="uid://bph4tco0pcyvv" path="res://Scripts/Global/p_1.gd" id="2_iiv82"]
+[ext_resource type="Script" uid="uid://cq7avcg8ln4qu" path="res://Scripts/Global/p_2.gd" id="3_ro2hb"]
+
 
 [node name="global_player_stats" type="Node" unique_id=824347272]
 script = ExtResource("1_qsnd4")
@@ -10,3 +12,4 @@ script = ExtResource("1_qsnd4")
 script = ExtResource("2_iiv82")
 
 [node name="p2" type="Node" parent="." unique_id=1245795725]
+script = ExtResource("3_ro2hb")

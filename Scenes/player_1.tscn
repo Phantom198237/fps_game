@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://bgeqxa8jeyyib"]
+[gd_scene format=3 uid="uid://qvdr6bye6y4n"]
 
 [ext_resource type="ArrayMesh" uid="uid://cyyc387upofej" path="res://resources/accesories/satyesz.obj" id="1_2mvbs"]
-[ext_resource type="ArrayMesh" uid="uid://d2fthee80ukw4" path="res://ump.obj" id="2_tmdyv"]
+[ext_resource type="Script" uid="uid://cbbpsfdbj6pf4" path="res://Scripts/P1/player_1.gd" id="1_tmdyv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r7fgb"]
 albedo_color = Color(0.23529412, 0, 0.62352943, 1)
@@ -9,93 +9,25 @@ albedo_color = Color(0.23529412, 0, 0.62352943, 1)
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_r7fgb"]
 material = SubResource("StandardMaterial3D_r7fgb")
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2mvbs"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tmdyv"]
-albedo_color = Color(0, 0.85622066, 0.85628027, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xg3ne"]
-albedo_color = Color(0.39607844, 1, 1, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tyugg"]
-albedo_color = Color(0.6509804, 0, 0.043137256, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p0e4v"]
-albedo_color = Color(0.3854925, 0.38549247, 0.38549247, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c4k0l"]
-albedo_color = Color(0.38431373, 0.38431373, 0.38431373, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aatkl"]
-albedo_color = Color(0.38431373, 0.38431373, 0.38431373, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lp8rx"]
-albedo_color = Color(0.38431373, 0.38431373, 0.38431373, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jkush"]
-albedo_color = Color(0.38431373, 0.38431373, 0.38431373, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vmi10"]
-albedo_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mndha"]
-albedo_color = Color(0.2520276, 0.25202766, 0.25202757, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ympu"]
-albedo_color = Color(0.2509804, 0.2509804, 0.2509804, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1fs8r"]
-albedo_color = Color(0.2509804, 0.2509804, 0.2509804, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s4j3i"]
-albedo_color = Color(0.20784314, 0.20784314, 0.20784314, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_et7db"]
-albedo_color = Color(0.33806044, 0.16739729, 0.05597496, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_du3lb"]
-albedo_color = Color(0.32941177, 0.15686275, 0.047058824, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kslfe"]
-albedo_color = Color(0.33844715, 0.15343216, 0.028150352, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k46vw"]
-albedo_color = Color(0.43529412, 0.1882353, 0.09019608, 1)
+[sub_resource type="SphereShape3D" id="SphereShape3D_tmdyv"]
 
 [node name="player 1" type="Node3D" unique_id=1583339241]
 
-[node name="CharacterBody3D" type="RigidBody3D" parent="." unique_id=865619130]
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=120325859]
+script = ExtResource("1_tmdyv")
 
 [node name="body" type="MeshInstance3D" parent="CharacterBody3D" unique_id=439634745]
 mesh = SubResource("CapsuleMesh_r7fgb")
 
 [node name="body2" type="CollisionShape3D" parent="CharacterBody3D" unique_id=2060536153]
-shape = SubResource("CapsuleShape3D_2mvbs")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("SphereShape3D_tmdyv")
 
 [node name="sapka" type="MeshInstance3D" parent="CharacterBody3D" unique_id=499498672]
-transform = Transform3D(0.39987713, 0.0029550432, 0.009464998, -0.0028147413, 0.39994586, -0.00594906, -0.009507666, 0.005880629, 0.39984375, 0, 0.90549153, 0)
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.90549153, 0)
 mesh = ExtResource("1_2mvbs")
-surface_material_override/0 = SubResource("StandardMaterial3D_tmdyv")
-surface_material_override/1 = SubResource("StandardMaterial3D_xg3ne")
-surface_material_override/2 = SubResource("StandardMaterial3D_tyugg")
 
-[node name="ump" type="MeshInstance3D" parent="CharacterBody3D" unique_id=1368343015]
-transform = Transform3D(0.061048508, 0, 0.9981348, 0, 1, 0, -0.9981348, 0, 0.061048508, 2.6555367, -0.16616762, -0.93594956)
-mesh = ExtResource("2_tmdyv")
-surface_material_override/0 = SubResource("StandardMaterial3D_p0e4v")
-surface_material_override/1 = SubResource("StandardMaterial3D_c4k0l")
-surface_material_override/2 = SubResource("StandardMaterial3D_aatkl")
-surface_material_override/3 = SubResource("StandardMaterial3D_lp8rx")
-surface_material_override/4 = SubResource("StandardMaterial3D_jkush")
-surface_material_override/5 = SubResource("StandardMaterial3D_vmi10")
-surface_material_override/6 = SubResource("StandardMaterial3D_mndha")
-surface_material_override/7 = SubResource("StandardMaterial3D_2ympu")
-surface_material_override/8 = SubResource("StandardMaterial3D_1fs8r")
-surface_material_override/9 = SubResource("StandardMaterial3D_s4j3i")
-surface_material_override/10 = SubResource("StandardMaterial3D_et7db")
-surface_material_override/11 = SubResource("StandardMaterial3D_du3lb")
-surface_material_override/12 = SubResource("StandardMaterial3D_kslfe")
-surface_material_override/13 = SubResource("StandardMaterial3D_k46vw")
+[node name="Camera pivot" type="Node3D" parent="." unique_id=2074936965]
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=501929263]
+[node name="Camera3D" type="Camera3D" parent="Camera pivot" unique_id=501929263]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
